@@ -20,7 +20,7 @@ export default function AdminProfilePage() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await fetch("/api/profile");
+        const response = await fetch("http://localhost:4000/profile");
         const data = await response.json();
 
         if (data) {
@@ -52,7 +52,7 @@ export default function AdminProfilePage() {
     setMessage("");
 
     try {
-      const response = await fetch("/api/profile", {
+      const response = await fetch("http://localhost:4000/profile", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
