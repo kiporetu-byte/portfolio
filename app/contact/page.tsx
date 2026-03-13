@@ -1,3 +1,4 @@
+// 公開用のお問い合わせフォームページ
 "use client";
 
 import { FormEvent, useState } from "react";

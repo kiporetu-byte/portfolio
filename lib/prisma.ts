@@ -1,3 +1,4 @@
+// backend用 Prisma Client
 import { PrismaClient } from "@prisma/client";
 
 const globalForPrisma = globalThis as unknown as {
