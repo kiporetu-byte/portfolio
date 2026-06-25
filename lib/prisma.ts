@@ -1,4 +1,4 @@
-// backend用 Prisma Client
+// backend用 Prisma Client Next.js側でPrismaを使う設定
 import { PrismaClient } from "@prisma/client";
 
 const globalForPrisma = globalThis as unknown as {

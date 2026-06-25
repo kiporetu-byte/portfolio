@@ -2,6 +2,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import Header from "@/components/Header";
 
 export default function ContactPage() {
   const [name, setName] = useState("");
@@ -37,62 +38,66 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="mx-auto max-w-xl p-6">
-      <h1 className="text-2xl font-bold">お問い合わせ</h1>
-      <p className="mt-2">お問い合わせフォームです。</p>
+    <main className="min-h-screen bg-slate-50 px-6 py-16 text-slate-800">
+      <Header />
 
-      <form onSubmit={handleSubmit} className="mt-6 space-y-4">
-        <div>
-          <label htmlFor="name" className="mb-1 block font-medium">
-            名前
-          </label>
-          <input
-            id="name"
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="w-full rounded border px-3 py-2"
-            required
-          />
-        </div>
+      <div className="mx-auto max-w-xl p-6">
+        <h1 className="text-2xl font-bold">お問い合わせ</h1>
+        <p className="mt-2">お問い合わせフォームです。</p>
 
-        <div>
-          <label htmlFor="email" className="mb-1 block font-medium">
-            メールアドレス
-          </label>
-          <input
-            id="email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="w-full rounded border px-3 py-2"
-            required
-          />
-        </div>
+        <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+          <div>
+            <label htmlFor="name" className="mb-1 block font-medium">
+              名前
+            </label>
+            <input
+              id="name"
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full rounded border px-3 py-2"
+              required
+            />
+          </div>
 
-        <div>
-          <label htmlFor="message" className="mb-1 block font-medium">
-            お問い合わせ内容
-          </label>
-          <textarea
-            id="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            className="w-full rounded border px-3 py-2"
-            rows={6}
-            required
-          />
-        </div>
+          <div>
+            <label htmlFor="email" className="mb-1 block font-medium">
+              メールアドレス
+            </label>
+            <input
+              id="email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full rounded border px-3 py-2"
+              required
+            />
+          </div>
 
-        <button
-          type="submit"
-          className="rounded bg-black px-4 py-2 text-white"
-        >
-          送信
-        </button>
+          <div>
+            <label htmlFor="message" className="mb-1 block font-medium">
+              お問い合わせ内容
+            </label>
+            <textarea
+              id="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              className="w-full rounded border px-3 py-2"
+              rows={6}
+              required
+            />
+          </div>
 
-        {result && <p className="text-sm text-gray-700">{result}</p>}
-      </form>
+          <button
+            type="submit"
+            className="rounded bg-black px-4 py-2 text-white"
+          >
+            送信
+          </button>
+
+          {result && <p className="text-sm text-gray-700">{result}</p>}
+        </form>
+      </div>
     </main>
   );
 }

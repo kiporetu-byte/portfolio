@@ -1,4 +1,4 @@
-// 管理画面のプロフィール登録・更新ページ
+// 管理画面のプロフィール編集フォーム 登録・更新ページ
 "use client";
 
 import { FormEvent, useEffect, useState } from "react";

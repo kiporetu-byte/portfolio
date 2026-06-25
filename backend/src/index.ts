@@ -1,4 +1,5 @@
 //Express API（profile / profile image / contacts）ExpressでAPIサーバーを作るコード
+//画像を /profile/image で返す
 import express from "express";//Expressライブラリを読み込むNode.jsでAPIサーバーを作るためのフレームワーク
 import cors from "cors";//CORSというライブラリを読み込む　CORSはフロントエンド（React / Next.js）からAPIにアクセスできるようにする設定 
 import { prisma } from "./prisma";

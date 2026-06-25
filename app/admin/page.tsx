@@ -1,3 +1,4 @@
+//ログイン中か確認して管理画面トップを表示
 "use client";
 
 import { useEffect, useState } from "react";
