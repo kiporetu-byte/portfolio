@@ -1,8 +1,9 @@
-"use client";
+//ログイン画面
+"use client";//クライアントコンポーネント宣言 このページはクライアント側（ブラウザ）で動く という宣言
 
-import { FormEvent, useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { useRouter } from "next/navigation";
+import { FormEvent, useState } from "react";//ReactからFormEvent（フォームのイベントの型）useState（状態管理）を読み込む
+import { signInWithEmailAndPassword } from "firebase/auth";//Firebaseの認証機能からメールアドレス＋パスワードでログインする機能を読み込む
+import { useRouter } from "next/navigation";//Next.jsのページ遷移機能（ルーター）**を読み込む
 import { auth } from "@/lib/firebase";
 
 export default function AdminLoginPage() {
