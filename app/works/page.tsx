@@ -9,29 +9,29 @@ const works = [
     points: ["..."],
     githubUrl: "...",
     appUrl: "...",
-    image: "",
+    image: "/images/sonaeare.png",
     device: "mobile",
   },
   {
     title: "ごほうび貯金Bot",
-    status: "個人開発",
+    status: "チーム開発",
     description: "...",
     technologies: [],
     points: [],
     githubUrl: "",
     appUrl: "",
-    image: "",
-    device: "desktop",
+    image: "/images/gohoubi.png",
+    device: "mobile",
   },
   {
     title: "お気に入り記事投稿サイト",
-    status: "個人開発",
+    status: "チーム開発",
     description: "...",
     technologies: [],
     points: [],
     githubUrl: "",
     appUrl: "",
-    image: "",
+    image: "/images/kiji.png",
     device: "desktop",
   },
   {
@@ -64,6 +64,24 @@ export default function WorksPage() {
               key={work.title}
               className="group rounded-none border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl"
             >
+              {work.image && (
+                <div className="mb-6 flex justify-center">
+                  <div
+                    className={
+                      work.device === "mobile"
+                        ? "w-52 overflow-hidden rounded-[2rem] border-8 border-slate-900 shadow-xl"
+                        : "w-full overflow-hidden rounded-lg border border-slate-300 shadow-xl"
+                    }
+                  >
+                    <img
+                      src={work.image}
+                      alt={work.title}
+                      className="h-64 w-full object-contain"
+                    />
+                  </div>
+                </div>
+              )}
+
               <div className="mb-3 flex items-center gap-3">
                 <h3 className="text-2xl font-semibold transition group-hover:text-slate-500">
                   {work.title}
